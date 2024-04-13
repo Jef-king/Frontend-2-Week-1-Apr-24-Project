@@ -5,21 +5,35 @@ let arr = [
   ];
   
   function PrintDeveloperbyMap() {
-    //Write your code here , just console.log
+    let developer = arr.filter((employee) => employee.profession === "developer").map((developer) => developer.name);
+    console.log(developer);
   }
   
   function PrintDeveloperbyForEach() {
-    //Write your code here , just console.log
+    arr.forEach((employee) => {
+      if (employee.profession === "developer") {
+        console.log(employee.name);
+      }
+    });
   }
   
   function addData() {
-    //Write your code here, just console.log
+    arr.push({ id: 4, name: "susan", age: "20", profession: "intern" });
+    console.log(arr);
   }
   
   function removeAdmin() {
-    //Write your code here, just console.log
+    let rmAdmin = arr.filter((employee) => employee.profession !== "admin");
+    console.log(rmAdmin);
   }
   
   function concatenateArray() {
-    //Write your code here, just console.log
+    let newAdd = [
+      { id: 4, name: "emma", age: "22", profession: "designer" },
+      { id: 5, name: "alex", age: "24", profession: "engineer" },
+      { id: 6, name: "olivia", age: "21", profession: "analyst" },
+    ];
+  
+    let newArr = arr.concat(newAdd);
+    console.log(newArr);
   }
